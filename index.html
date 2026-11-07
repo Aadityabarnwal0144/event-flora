@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EventPulse - Explore upcoming tech conferences, design summits, music festivals, and workshops. Register seamlessly with instant digital tickets." />
+  <meta name="keywords" content="event management, event discovery, tech conferences, hackathons, music festivals, ticketing" />
+  <meta name="author" content="EventPulse Team" />
+
+  <title>EventPulse — Discover, Experience & Register for World-Class Events</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'%3E%3C/polygon%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER / NAVBAR
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="EventPulse Home">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <span>Event<span class="gradient-text">Pulse</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#eventsSection" class="nav-link active">Explore Events</a></li>
+          <li><a href="#featuredSection" class="nav-link">Featured Spotlight</a></li>
+          <li><a href="#aboutSection" class="nav-link">About Platform</a></li>
+          <li><a href="#contactSection" class="nav-link">Host an Event</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Switch Theme" aria-label="Switch Theme">
+          <span id="themeIcon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+
+        <!-- "My Tickets" LocalStorage Drawer Trigger -->
+        <button type="button" class="btn btn-secondary btn-sm my-tickets-btn" id="myTicketsBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>My Tickets</span>
+          <span class="badge-count" id="ticketsBadge">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section">
+      <div class="ambient-glow-1"></div>
+      <div class="ambient-glow-2"></div>
+
+      <div class="container hero-content">
+        <div class="hero-pill-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>The Next Generation Event Experience</span>
+        </div>
+
+        <h1 class="hero-title">
+          Discover, Connect & Experience <br />
+          <span class="gradient-text">World-Class Events</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Join thousands of innovators, creators, and professionals exploring premier conferences, hands-on masterclasses, and vibrant cultural gatherings worldwide.
+        </p>
+
+        <!-- Hero Quick Search Widget -->
+        <form class="hero-search-box" id="heroSearchForm" role="search" aria-label="Find events">
+          <div class="search-field-group">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="heroSearchInput" class="search-input-main" placeholder="Search by event title, tech stack, city, or speaker..." aria-label="Event search term" />
+          </div>
+
+          <div class="search-divider"></div>
+
+          <select id="heroCategorySelect" class="search-select-category" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary" id="heroSearchBtn">
+            <span>Find Events</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Live Platform Stats -->
+        <div class="hero-stats-grid">
+          <div class="stat-item">
+            <strong class="stat-number gradient-text" id="statTotalEvents">12+</strong>
+            <span class="stat-label">Upcoming Events</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number gradient-text" id="statAvailableSeats">3,450+</strong>
+            <span class="stat-label">Available Passes</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number gradient-text">120K+</strong>
+            <span class="stat-label">Community Attendees</span>
+          </div>
+          <div class="stat-item">
+            <strong class="stat-number gradient-text">98%</strong>
+            <span class="stat-label">Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED EVENT & LIVE COUNTDOWN SPOTLIGHT
+         ==================================================================== -->
+    <section class="featured-section" id="featuredSection">
+      <div class="container">
+        <div class="featured-banner" id="featuredEventCard">
+          <div class="featured-left">
+            <div class="featured-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>Featured Spotlight of the Month</span>
+            </div>
+            <h2 class="featured-title">Global AI & Machine Learning Summit 2026</h2>
+            <p class="featured-desc">
+              Join top machine learning architects, research leads, and industry visionaries at the Moscone Center. Discover autonomous agents, LLM safety architectures, and next-gen generative intelligence.
+            </p>
+
+            <div class="featured-meta-row">
+              <div class="featured-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>November 20, 2026</span>
+              </div>
+              <div class="featured-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>San Francisco, CA & Virtual Stream</span>
+              </div>
+              <div class="featured-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                  <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+                </svg>
+                <span>VIP & General Passes Available</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary" id="heroFeaturedRegisterBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7.5" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                Reserve Your Pass
+              </button>
+              <button type="button" class="btn btn-secondary" id="heroExploreBtn">
+                Browse All Events
+              </button>
+            </div>
+          </div>
+
+          <!-- Live Real-Time Countdown Box -->
+          <div class="featured-right">
+            <div class="countdown-container" aria-label="Event Countdown">
+              <div class="countdown-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Event Starts In</span>
+              </div>
+
+              <div class="countdown-boxes">
+                <div class="countdown-box">
+                  <span class="countdown-digits" id="countdownDays">00</span>
+                  <span class="countdown-unit">Days</span>
+                </div>
+                <div class="countdown-box">
+                  <span class="countdown-digits" id="countdownHours">00</span>
+                  <span class="countdown-unit">Hours</span>
+                </div>
+                <div class="countdown-box">
+                  <span class="countdown-digits" id="countdownMins">00</span>
+                  <span class="countdown-unit">Mins</span>
+                </div>
+                <div class="countdown-box">
+                  <span class="countdown-digits" id="countdownSecs">00</span>
+                  <span class="countdown-unit">Secs</span>
+                </div>
+              </div>
+
+              <p class="text-subtle" style="font-size: 0.82rem;">
+                🔥 Limited seats remaining. Registration closes 24 hours prior to keynote kickoff.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MAIN EVENTS DISCOVERY & FILTERING SECTION
+         ==================================================================== -->
+    <section class="events-section" id="eventsSection">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head-wrap">
+          <div>
+            <h2 class="section-title">Explore Upcoming Events</h2>
+            <p class="section-subtitle">Discover top-rated summits, workshops, and gatherings tailored to your interests.</p>
+          </div>
+          <div id="resultsCount" class="text-subtle" style="font-size: 0.9rem; font-weight: 600;">
+            Showing 12 of 12 events
+          </div>
+        </div>
+
+        <!-- Category Pills (Horizontal Navigation) -->
+        <div class="category-filter-wrap" id="categoryPills" role="tablist" aria-label="Filter events by category">
+          <!-- Dynamic Category Pills Rendered via JavaScript -->
+        </div>
+
+        <!-- Secondary Controls & Filter Bar -->
+        <div class="filter-bar">
+          <div class="filter-left-tools">
+            <!-- Live Search -->
+            <div class="filter-search-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="searchInput" class="filter-search-input" placeholder="Filter by name, location, topic..." aria-label="Filter events" />
+              <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Clear search" aria-label="Clear search">&times;</button>
+            </div>
+
+            <!-- Dropdown Filters Group -->
+            <div class="filter-selects-group">
+              <!-- Date Filter -->
+              <select id="dateFilterSelect" class="filter-dropdown" aria-label="Filter by date">
+                <option value="all">All Dates</option>
+                <option value="soon">Upcoming 14 Days</option>
+                <option value="month">This Month</option>
+              </select>
+
+              <!-- Price Filter -->
+              <select id="priceFilterSelect" class="filter-dropdown" aria-label="Filter by price">
+                <option value="all">All Prices</option>
+                <option value="free">Free Events Only</option>
+                <option value="paid">Paid Passes Only</option>
+              </select>
+
+              <!-- Sort Dropdown -->
+              <select id="sortSelect" class="filter-dropdown" aria-label="Sort events">
+                <option value="date-asc">Date: Nearest First</option>
+                <option value="date-desc">Date: Furthest First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="popularity">Popularity / Seats</option>
+                <option value="title-asc">Title: A to Z</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Right View Switchers & Reset -->
+          <div class="filter-right-tools">
+            <button type="button" class="btn btn-outline btn-sm" id="resetFiltersBtn" title="Reset all filters">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Reset
+            </button>
+
+            <div class="view-toggle-btns" role="group" aria-label="Change layout view">
+              <button type="button" class="view-btn active" id="viewGridBtn" title="Grid View" aria-label="Grid View">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+              <button type="button" class="view-btn" id="viewListBtn" title="List View" aria-label="List View">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Events Grid -->
+        <div class="events-grid" id="eventsGrid">
+          <!-- Dynamic Event Cards Generated Here -->
+        </div>
+
+        <!-- Empty State (No search results) -->
+        <div class="empty-results-state" id="noResultsState">
+          <div class="empty-icon-circle">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="empty-title">No matching events found</h3>
+          <p class="empty-desc">We couldn't find any events matching your selected search query or category filters. Try expanding your search terms or resetting filters.</p>
+          <button type="button" class="btn btn-primary" onclick="document.getElementById('resetFiltersBtn').click()">
+            Reset All Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT / PLATFORM HIGHLIGHTS SECTION
+         ==================================================================== -->
+    <section class="container" id="aboutSection" style="padding: 3rem 1.5rem 5rem;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 3rem 2.5rem;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem;">Why Organizers & Attendees Choose <span class="gradient-text">EventPulse</span></h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">A modern end-to-end event discovery and registration platform engineered with speed, accessibility, and delightful user experience in mind.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+          <div style="background: var(--bg-input); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(99, 102, 241, 0.15); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Real-Time Validation</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">Instant, friendly feedback guarantees smooth error-free registration with strict regex verification.</p>
+          </div>
+
+          <div style="background: var(--bg-input); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.15); color: var(--color-success); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">LocalStorage Persistence</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">Your digital passes, booked seats, and favorite events are persistently saved in your browser storage.</p>
+          </div>
+
+          <div style="background: var(--bg-input); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.15); color: var(--color-warning); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Calendar .ics Export</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">One-click export allows attendees to add any booked event directly to Google, Apple, or Outlook calendars.</p>
+          </div>
+
+          <div style="background: var(--bg-input); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(236, 72, 153, 0.15); color: #ec4899; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem;">Dynamic Seat Allocation</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">Remaining capacities auto-decrement upon booking and restore if registrations are cancelled.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       MODAL: EVENT DETAILED INFORMATION
+       ====================================================================== -->
+  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalDetailHeading">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="closeDetailModalBtn" aria-label="Close event details">&times;</button>
+      <div id="detailModalContent">
+        <!-- Dynamic Event Details Injected via js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL: EVENT REGISTRATION & CONFIRMATION
+       ====================================================================== -->
+  <div class="modal-backdrop" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
+    <div class="modal-dialog" style="max-width: 640px;">
+      <button type="button" class="modal-close-btn" id="closeRegisterModalBtn" aria-label="Close registration dialog">&times;</button>
+
+      <!-- Step 1: Registration Form -->
+      <div id="registrationFormContainer">
+        <div class="modal-form-header">
+          <h2 class="modal-form-title" id="regModalTitle">Event Registration Pass</h2>
+          <p class="modal-form-subtitle">Fill out attendee details to reserve your ticket. Immediate digital confirmation will be generated.</p>
+        </div>
+
+        <form class="modal-form-body" id="registrationForm" novalidate>
+          <!-- Select Event -->
+          <div class="form-group">
+            <label for="regEventSelect" class="form-label">Selected Event <span class="required-star">*</span></label>
+            <select id="regEventSelect" class="form-select" required aria-required="true">
+              <option value="">-- Choose an Event to Register --</option>
+            </select>
+            <span class="form-error-msg" id="errEventSelect"></span>
+          </div>
+
+          <!-- Attendee Full Name -->
+          <div class="form-group">
+            <label for="regFullName" class="form-label">Full Name <span class="required-star">*</span></label>
+            <input type="text" id="regFullName" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name" />
+            <span class="form-error-msg" id="errFullName"></span>
+          </div>
+
+          <!-- Email & Phone Grid -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+              <input type="email" id="regEmail" class="form-input" placeholder="alex@example.com" required autocomplete="email" />
+              <span class="form-error-msg" id="errEmail"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="regPhone" class="form-label">Phone Number <span class="required-star">*</span></label>
+              <input type="tel" id="regPhone" class="form-input" placeholder="+1 (555) 019-2834" required autocomplete="tel" />
+              <span class="form-error-msg" id="errPhone"></span>
+            </div>
+          </div>
+
+          <!-- Pass Tier & Quantity Grid -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="regTicketType" class="form-label">Pass Tier</label>
+              <select id="regTicketType" class="form-select">
+                <option value="standard">Standard Admission</option>
+                <option value="vip">VIP All-Access Pass (+Networking & Swag)</option>
+                <option value="student">Student / Academic Pass (50% Off)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="regTicketCount" class="form-label">Quantity (Max 5)</label>
+              <input type="number" id="regTicketCount" class="form-input" min="1" max="5" value="1" required />
+              <span class="form-error-msg" id="errTicketCount"></span>
+            </div>
+          </div>
+
+          <!-- Special Dietary / Accessibility Needs -->
+          <div class="form-group">
+            <label for="regSpecialNotes" class="form-label">Dietary or Accessibility Needs <span class="text-subtle">(Optional)</span></label>
+            <input type="text" id="regSpecialNotes" class="form-input" placeholder="e.g. Vegetarian lunch, wheelchair access, ASL interpreter" />
+          </div>
+
+          <!-- Live Pricing Breakdown -->
+          <div class="form-pricing-summary">
+            <div>
+              <span class="pricing-calc-label">Total Payable</span>
+              <span class="pricing-calc-breakdown" id="priceBreakdownText">Standard Ticket × 1</span>
+            </div>
+            <strong class="pricing-total-value" id="totalAmountText">$0.00</strong>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="form-group">
+            <label class="checkbox-group">
+              <input type="checkbox" id="regTermsCheck" required />
+              <span>I agree to the Event Code of Conduct, safety protocols, and cancellation policies. <span class="required-star">*</span></span>
+            </label>
+            <span class="form-error-msg" id="errTerms"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" id="submitRegistrationBtn" style="width: 100%; margin-top: 0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Confirm & Complete Registration</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Digital Ticket Confirmation -->
+      <div id="registrationSuccessContainer" class="registration-success-wrap">
+        <div class="success-badge-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h3 class="success-title">You're All Set! Registration Confirmed</h3>
+        <p class="success-subtitle">We've reserved your pass. Your official digital admission pass is ready below:</p>
+
+        <!-- Dynamic Digital Pass Generated Here -->
+        <div id="digitalPassContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       DRAWER: "MY TICKETS & REGISTRATIONS" (LOCALSTORAGE MANAGEMENT)
+       ====================================================================== -->
+  <div class="drawer-backdrop" id="ticketsDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerHeading">
+    <div class="drawer-container">
+      <div class="drawer-header">
+        <h3 class="drawer-title" id="drawerHeading">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          My Booked Passes
+        </h3>
+        <button type="button" class="drawer-close-btn" id="closeTicketsDrawerBtn" aria-label="Close my tickets drawer">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <!-- Dynamic Tickets List -->
+        <div id="ticketsDrawerList"></div>
+
+        <!-- Empty State in Drawer -->
+        <div id="ticketsEmptyState" style="text-align: center; padding: 3rem 1rem; display: none;">
+          <div class="empty-icon-circle" style="margin: 0 auto 1rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h4 style="font-weight: 700; margin-bottom: 0.35rem;">No Registrations Yet</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem;">You haven't registered for any events yet. Explore upcoming summits and secure your pass.</p>
+          <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('closeTicketsDrawerBtn').click(); document.getElementById('eventsSection').scrollIntoView({behavior: 'smooth'});">
+            Explore Events Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       TOAST NOTIFICATION CONTAINER
+       ====================================================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer" id="contactSection">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <span>Event<span class="gradient-text">Pulse</span></span>
+          </a>
+          <p>The premier interactive event management and discovery platform for technology, creative design, business, and cultural summits.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#eventsSection">Upcoming Events</a></li>
+            <li><a href="#featuredSection">Featured Spotlight</a></li>
+            <li><a href="#aboutSection">Platform Highlights</a></li>
+            <li><a href="#eventsSection">Free Workshops</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#eventsSection">Technology & AI</a></li>
+            <li><a href="#eventsSection">Design & UX</a></li>
+            <li><a href="#eventsSection">Music & Arts</a></li>
+            <li><a href="#eventsSection">Business & Startups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Updated</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.85rem;">Subscribe to get early-bird ticket releases and exclusive speaker announcements.</p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email address" style="background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.55rem 0.85rem; font-size: 0.85rem; flex: 1; outline: none;" />
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Thank you for subscribing to EventPulse updates!')">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 EventPulse Platform. Built with HTML5, CSS3, & Modern JavaScript. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Code of Conduct</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       JAVASCRIPT MODULES
+       ====================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
