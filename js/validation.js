@@ -1,5 +1,5 @@
 /**
- * EventPulse - Robust JavaScript Form Validation Module
+ * EventFlora - Robust JavaScript Form Validation Module
  * Real-time feedback, regex validation, sanitization, and accessible error messaging.
  */
 

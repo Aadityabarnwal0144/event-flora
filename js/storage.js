@@ -1,13 +1,13 @@
 /**
- * EventPulse - LocalStorage Management Engine
+ * EventFlora - LocalStorage Management Engine
  * Handles persistent state for registrations, favorites, theme, and seat counts.
  */
 
 const STORAGE_KEYS = {
-  REGISTRATIONS: "eventpulse_registrations_v1",
-  FAVORITES: "eventpulse_favorites_v1",
-  THEME: "eventpulse_theme_v1",
-  SEATS: "eventpulse_seats_v1"
+  REGISTRATIONS: "eventflora_registrations_v1",
+  FAVORITES: "eventflora_favorites_v1",
+  THEME: "eventflora_theme_v1",
+  SEATS: "eventflora_seats_v1"
 };
 
 const StorageService = {
@@ -105,9 +105,9 @@ const StorageService = {
   saveRegistration(formData, event) {
     const registrations = this.getRegistrations();
     
-    // Generate unique Ticket ID: e.g. "EP-2026-78491"
+    // Generate unique Ticket ID: e.g. "EF-2026-78491"
     const randomHex = Math.floor(10000 + Math.random() * 90000);
-    const ticketId = `EP-${new Date().getFullYear()}-${randomHex}`;
+    const ticketId = `EF-${new Date().getFullYear()}-${randomHex}`;
 
     const newRegistration = {
       ticketId,

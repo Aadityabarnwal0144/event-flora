@@ -1,26 +1,26 @@
-# 🌟 EventPulse — Modern Responsive Event Management Platform
+# 🌸 EventFlora — Modern Responsive Event Management Platform
 
 > **K Explore Web Designing Task**: Design and Develop a Modern, Visually Appealing, and Fully Responsive Event Management Website.
 
-![EventPulse Platform Preview](https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80)
+![EventFlora Platform Preview](https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80)
 
 ---
 
 ## 📌 Project Overview
 
-**EventPulse** is an enterprise-grade, responsive event discovery and registration web application designed to connect creators, developers, designers, and professionals with world-class summits, masterclasses, and conferences.
+**EventFlora** is an enterprise-grade, responsive event discovery and registration web application designed to connect creators, developers, designers, and professionals with world-class summits, masterclasses, and conferences.
 
-Built using semantic **HTML5**, modern **CSS3** design system with fluid typography and dark/light modes, and modular **vanilla JavaScript (ES6+)**, EventPulse delivers an app-like experience with zero dependencies or complex build steps.
+Built using semantic **HTML5**, a modern **CSS3** design system with fluid typography and dark/light modes, and modular **vanilla JavaScript (ES6+)**, EventFlora delivers a seamless app-like experience with zero external dependencies or build tooling.
 
 ---
 
-## 🚀 Live Demo & Deployment
+## 🚀 Live Demo & Repository Links
 
 | Resource | Link |
 | :--- | :--- |
-| **Live Deployed Website (GitHub Pages)** | `https://<your-username>.github.io/event-pulse/` *(Update with your URL)* |
-| **Live Deployed Website (Vercel / Netlify)** | `https://event-pulse.vercel.app` *(Optional)* |
-| **GitHub Repository** | `https://github.com/<your-username>/event-pulse` |
+| **GitHub Repository** | [https://github.com/Aadityabarnwal0144/event-flora](https://github.com/Aadityabarnwal0144/event-flora) |
+| **Live Deployed Website (GitHub Pages)** | [https://aadityabarnwal0144.github.io/event-flora/](https://aadityabarnwal0144.github.io/event-flora/) |
+| **Alternative Deployed Link (Vercel / Netlify)** | *https://event-flora.vercel.app* |
 
 ---
 
@@ -81,7 +81,7 @@ Built using semantic **HTML5**, modern **CSS3** design system with fluid typogra
 ### 6. 🎟️ Digital Admission E-Ticket (Pass Generation)
 - **Post-Registration Confirmation View**:
   - Celebration badge animation.
-  - Official Digital E-Ticket featuring unique ticket ID (e.g., `EP-2026-83921`).
+  - Official Digital E-Ticket featuring unique ticket ID (e.g., `EF-2026-83921`).
   - Attendee name, event details, venue, time, and seat count.
   - Simulated vector Barcode and QR-Code pass preview.
   - **Print / Save Pass**: Custom `@media print` CSS stylesheet cleanly formatting the ticket for physical badge printing or PDF export.
@@ -125,7 +125,7 @@ Built using semantic **HTML5**, modern **CSS3** design system with fluid typogra
 ## 📂 Project Structure
 
 ```text
-event-pulse/
+event-flora/
 │
 ├── index.html              # Main semantic HTML5 webpage
 │
@@ -165,8 +165,8 @@ To run and inspect the project on your local machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<your-username>/event-pulse.git
-   cd event-pulse
+   git clone https://github.com/Aadityabarnwal0144/event-flora.git
+   cd event-flora
    ```
 
 2. **Open in Browser**:
@@ -175,50 +175,35 @@ To run and inspect the project on your local machine:
      ```bash
      # Using Python:
      python -m http.server 8000
-
-     # Or using VS Code:
-     # Right-click index.html -> "Open with Live Server"
      ```
    - Open `http://localhost:8000` in your browser.
 
 ---
 
-## 🌐 Step-by-Step Deployment Guide
+## 🌐 Step-by-Step GitHub Push & Deployment Guide
 
-### Option 1: Deploy to GitHub Pages (Recommended - 100% Free & Built-In)
-1. Push your repository to GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete responsive event management platform"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/event-pulse.git
-   git push -u origin main
-   ```
-2. On GitHub, navigate to your repository **Settings**.
-3. Under the **Code and automation** section on the left sidebar, click **Pages**.
-4. Under **Build and deployment** > **Branch**, select `main` branch and `/ (root)` folder.
+### Push to GitHub (`main` Branch)
+Run the following commands in the project folder:
+```bash
+git branch -M main
+git remote add origin https://github.com/Aadityabarnwal0144/event-flora.git
+git push -u origin main
+```
+
+### Enable GitHub Pages (1-Click, Free Hosting)
+1. On GitHub, navigate to your repository [event-flora](https://github.com/Aadityabarnwal0144/event-flora).
+2. Go to the **Settings** tab.
+3. Select **Pages** on the left navigation bar.
+4. Under **Build and deployment** > **Branch**, choose `main` branch and `/ (root)` folder.
 5. Click **Save**.
 6. Within 1–2 minutes, your website is live at:
-   `https://<your-username>.github.io/event-pulse/`
-
-### Option 2: Deploy to Vercel
-1. Visit [vercel.com](https://vercel.com/) and sign in with GitHub.
-2. Click **Add New Project** and select your `event-pulse` repository.
-3. Keep the default settings (Framework Preset: *Other*) and click **Deploy**.
-4. Your website is instantly deployed with a custom SSL URL (e.g., `https://event-pulse.vercel.app`).
-
-### Option 3: Deploy to Netlify
-1. Visit [netlify.com](https://www.netlify.com/) and sign in.
-2. Select **Add new site** > **Import an existing project** > **GitHub**.
-3. Pick `event-pulse` and click **Deploy Site**.
-4. Netlify will provide an instant live URL.
+   **`https://aadityabarnwal0144.github.io/event-flora/`**
 
 ---
 
 ## 🏆 Bonus Challenge Evaluation Matrix
 
-| Challenge Requirement | Implementation in EventPulse | Status |
+| Challenge Requirement | Implementation in EventFlora | Status |
 | :--- | :--- | :---: |
 | **Dark / Light Mode** | Custom CSS properties toggle with persistent `localStorage` theme state | ✅ Implemented |
 | **Event Countdown Timers** | Real-time live countdown calculating days, hours, mins, secs | ✅ Implemented |
@@ -233,6 +218,8 @@ To run and inspect the project on your local machine:
 ## 👨‍💻 Submission Details
 
 - **Task Title**: Design and Develop a Responsive Event Management Website
+- **Repository**: [https://github.com/Aadityabarnwal0144/event-flora](https://github.com/Aadityabarnwal0144/event-flora)
+- **Deployed Website**: [https://aadityabarnwal0144.github.io/event-flora/](https://aadityabarnwal0144.github.io/event-flora/)
 - **Technology Stack**: HTML5, CSS3, Modern JavaScript (ES6+), Git & GitHub
 - **Submission Date**: November 2026
 

@@ -1,5 +1,5 @@
 /**
- * EventPulse - Comprehensive Mock Events Dataset
+ * EventFlora - Comprehensive Mock Events Dataset
  * Contains high-quality, realistic event entries across diverse categories.
  */
 

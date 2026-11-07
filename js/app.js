@@ -1,5 +1,5 @@
 /**
- * EventPulse - Main Application Controller
+ * EventFlora - Main Application Controller
  * Handles UI interactions, rendering, dynamic filters, modals, countdown timers,
  * LocalStorage ticket management, calendar exports, and theme toggling.
  */
@@ -1227,14 +1227,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const icsContent = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//EventPulse//EN",
+      "PRODID:-//EventFlora//EN",
       "BEGIN:VEVENT",
-      `UID:${reg.ticketId}@eventpulse.io`,
+      `UID:${reg.ticketId}@eventflora.io`,
       `DTSTAMP:${startIso}`,
       `DTSTART:${startIso}`,
       `DTEND:${endIso}`,
       `SUMMARY:${reg.eventTitle}`,
-      `DESCRIPTION:EventPulse Pass: ${reg.ticketId}\\nAttendee: ${reg.attendeeName}\\nTickets: ${reg.ticketCount}`,
+      `DESCRIPTION:EventFlora Pass: ${reg.ticketId}\\nAttendee: ${reg.attendeeName}\\nTickets: ${reg.ticketCount}`,
       `LOCATION:${reg.eventVenue}, ${reg.eventLocation}`,
       "STATUS:CONFIRMED",
       "END:VEVENT",
@@ -1245,7 +1245,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `eventpulse-${reg.ticketId}.ics`;
+    link.download = `eventflora-${reg.ticketId}.ics`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
